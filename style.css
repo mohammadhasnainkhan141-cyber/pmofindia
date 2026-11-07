@@ -1,0 +1,163 @@
+:root {
+  color-scheme: light;
+  --ink: #192821;
+  --muted: #64716b;
+  --paper: #f7f6f1;
+  --green: #214f3a;
+  --deep-green: #163d2c;
+  --saffron: #e58b36;
+  --line: #dedfd7;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.7; }
+a { color: inherit; }
+.site-header { height: 82px; padding: 0 7.2%; display: flex; align-items: center; justify-content: space-between; background: var(--paper); }
+.brand { display: inline-flex; gap: 12px; align-items: center; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: .14em; line-height: 1.25; }
+.brand-mark { width: 38px; height: 38px; border: 1px solid var(--saffron); border-radius: 50%; display: grid; place-items: center; color: var(--green); font-size: 11px; letter-spacing: 0; }
+.brand-caption { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 400; letter-spacing: .04em; }
+nav { display: flex; gap: 32px; }
+nav a { text-decoration: none; color: #435149; font-size: 12px; }
+nav a:hover, nav a:focus-visible { color: var(--saffron); }
+.hero { position: relative; min-height: 570px; padding: 74px 11% 74px; overflow: hidden; background: #eae8df; display: flex; align-items: center; }
+.hero-copy { position: relative; z-index: 2; width: 50%; }
+.eyebrow { margin: 0 0 18px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
+.eyebrow-line { display: inline-block; width: 28px; height: 1px; margin: 0 9px 3px 0; background: var(--saffron); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { margin: 14px 0 18px; font-family: var(--serif); font-size: clamp(70px, 9.5vw, 126px); font-weight: 600; letter-spacing: -.075em; line-height: .9; }
+h1 span { color: var(--green); }
+.hero-intro { max-width: 425px; margin-bottom: 27px; color: #58645d; font-size: 15px; }
+.button { display: inline-flex; align-items: center; gap: 26px; padding: 12px 17px; background: var(--green); color: #fff; text-decoration: none; font-size: 11px; font-weight: 600; }
+.button:hover, .button:focus-visible { background: var(--deep-green); }
+.button span { font-size: 16px; }
+.hero-note { margin: 27px 0 0; color: var(--muted); font-size: 11px; }
+.hero-note strong { color: var(--ink); }
+.hero-art { position: absolute; top: 0; right: 0; width: 49%; height: 100%; display: grid; place-items: center; }
+.hero-art img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+.hero-bottom { position: absolute; right: 7.2%; bottom: 18px; left: 7.2%; display: flex; justify-content: space-between; color: #6d776e; font-size: 8px; letter-spacing: .14em; }
+.facts-strip { padding: 28px 11%; display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; background: var(--green); color: white; }
+.facts-strip > div { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.25); }
+.facts-strip > div:first-child { padding-left: 0; border-left: 0; }
+.facts-strip span, .facts-strip strong { display: block; }
+.fact-label { margin-bottom: 7px; color: #c9d4cb; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.facts-strip strong { font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.facts-strip div > span:last-child { margin-top: 3px; color: #d3ddd5; font-size: 10px; }
+.section { padding: 105px 11%; }
+.biography, .initiatives, .sources, .prime-ministers, .nehru-inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; }
+h2 { margin: 0; font-family: var(--serif); font-size: clamp(38px, 4vw, 56px); font-weight: 600; letter-spacing: -.045em; line-height: 1.12; }
+.lead { color: var(--ink); font-family: var(--serif); font-size: 21px; line-height: 1.55; }
+.prime-ministers { align-items: start; }
+.prime-ministers-content > .lead { max-width: 650px; }
+.table-scroll { overflow-x: auto; border: 1px solid var(--line); background: #fff; }
+.table-scroll:focus-visible { outline: 2px solid var(--saffron); outline-offset: 3px; }
+.pm-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 11px; }
+.pm-table th { padding: 12px 14px; background: var(--green); color: #fff; font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.pm-table td { padding: 10px 14px; border-bottom: 1px solid var(--line); }
+.pm-table tbody tr:last-child td { border-bottom: 0; }
+.pm-table tbody tr:nth-child(even) { background: #f1f0ea; }
+.pm-table td:first-child { width: 36px; color: #b66c2b; }
+.pm-table td:last-child { white-space: nowrap; color: #5d6862; }
+.acting-label { margin-left: 5px; padding: 2px 5px; background: #eeede6; color: #68746c; font-size: 8px; text-transform: uppercase; }
+.table-note { margin: 12px 0 0; color: var(--muted); font-size: 10px; }
+.nehru-section { background: #eeede6; }
+.nehru-inner { align-items: start; }
+.nehru-name { margin: 22px 0 0; color: var(--green); font-family: var(--serif); font-size: 16px; }
+.nehru-name span { display: block; margin-top: 3px; color: var(--muted); font-family: var(--sans); font-size: 10px; }
+.nehru-copy > p:not(.lead) { color: #5d6862; font-size: 13px; }
+.nehru-quote { margin: 25px 0 18px; padding: 18px 22px; border-left: 2px solid var(--saffron); background: rgba(255,255,255,.55); }
+.nehru-quote blockquote { margin: 0; color: var(--green); font-family: var(--serif); font-size: 20px; line-height: 1.5; }
+.nehru-quote figcaption { margin-top: 9px; color: var(--muted); font-size: 10px; }
+.nehru-quote cite { font-style: italic; }
+.nehru-link { display: inline-flex; gap: 14px; align-items: center; margin-top: 8px; color: var(--green); font-size: 11px; font-weight: 600; text-decoration-color: var(--saffron); text-underline-offset: 4px; }
+.nehru-link span { font-size: 15px; }
+.biography-copy > p:not(.lead) { color: #5d6862; font-size: 13px; }
+.note-box { margin-top: 29px; padding: 18px 20px; display: flex; gap: 13px; border-left: 2px solid var(--saffron); background: #efeee7; }
+.note-icon { width: 20px; height: 20px; flex: 0 0 20px; border: 1px solid #bc7939; border-radius: 50%; color: #a45b25; text-align: center; font-size: 12px; line-height: 18px; }
+.note-box p { margin: 0; color: #626c65; font-size: 11px; }
+.note-box strong { color: var(--ink); font-size: 12px; }
+.timeline-section { background: #eeede6; }
+.timeline-inner { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; }
+.heading-note { max-width: 230px; margin-top: 20px; color: var(--muted); font-size: 12px; }
+.timeline { border-top: 1px solid var(--line); }
+.timeline-item { display: grid; grid-template-columns: 80px 1fr; gap: 20px; padding: 21px 0; border-bottom: 1px solid var(--line); }
+.timeline-year { color: #b66c2b; font-family: var(--serif); font-size: 19px; }
+.timeline-item h3 { margin: 1px 0 4px; font-family: var(--serif); font-size: 17px; font-weight: 600; }
+.timeline-item p { max-width: 440px; margin: 0; color: var(--muted); font-size: 11px; }
+.initiatives { align-items: start; }
+.initiative-content > .lead { max-width: 650px; margin-bottom: 29px; }
+.initiative-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.initiative-card { position: relative; min-height: 165px; padding: 20px; background: var(--paper); }
+.card-number { color: #c47b3a; font-size: 10px; letter-spacing: .12em; }
+.card-year { float: right; color: #768178; font-size: 10px; }
+.initiative-card h3 { margin: 14px 0 6px; font-family: var(--serif); font-size: 17px; }
+.initiative-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.events-box { margin-top: 22px; padding: 22px 24px; background: #eeede6; }
+.events-box .eyebrow { margin-bottom: 9px; font-size: 9px; }
+.events-box > p:last-child { margin: 0; color: #59645d; font-size: 11px; }
+.closing { padding: 75px 12%; background: var(--deep-green); color: #fff; text-align: center; }
+.closing .eyebrow { color: #eab372; }
+.closing h2 { font-size: clamp(35px, 4.8vw, 58px); }
+.closing h2 span { color: #e8ad6b; }
+.closing > p:not(.eyebrow) { max-width: 470px; margin: 17px auto 23px; color: #d3ded5; font-size: 12px; }
+.button-light { background: #f4f0e7; color: var(--deep-green); }
+.button-light:hover, .button-light:focus-visible { background: #fff; }
+.sources { padding-bottom: 80px; }
+.source-list { border-top: 1px solid var(--line); }
+.source-list a { display: grid; grid-template-columns: 38px 1fr 20px; gap: 12px; align-items: center; padding: 15px 3px; border-bottom: 1px solid var(--line); text-decoration: none; }
+.source-list a > span:first-child { color: #bc7839; font-size: 10px; }
+.source-list strong, .source-list small { display: block; }
+.source-list strong { font-family: var(--serif); font-size: 14px; font-weight: 600; }
+.source-list small { margin-top: 2px; color: var(--muted); font-size: 10px; }
+.source-arrow { color: var(--green); }
+.source-list a:hover strong, .source-list a:focus-visible strong { color: #b66c2b; }
+.source-note { margin: 17px 0 0; color: var(--muted); font-size: 10px; }
+footer { min-height: 100px; padding: 24px 7.2%; display: flex; align-items: center; justify-content: space-between; gap: 18px; border-top: 1px solid var(--line); }
+footer > p { margin: 0; color: var(--muted); font-size: 10px; }
+footer .credit { color: var(--ink); }
+footer .credit strong { color: var(--green); }
+
+@media (min-width: 1400px) {
+  .hero { min-height: 650px; }
+  .section { padding-top: 120px; padding-bottom: 120px; }
+}
+@media (max-width: 800px) {
+  .site-header { height: auto; min-height: 75px; padding: 16px 6%; }
+  nav { gap: 8px 15px; flex-wrap: wrap; justify-content: flex-end; }
+  nav a { font-size: 10px; }
+  .hero { min-height: 520px; padding: 60px 8%; }
+  .hero-copy { width: 60%; }
+  .hero-art { width: 48%; }
+  .facts-strip { padding: 25px 7%; grid-template-columns: repeat(2,1fr); row-gap: 22px; }
+  .facts-strip > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .section { padding: 78px 8%; }
+  .biography, .initiatives, .sources, .prime-ministers, .nehru-inner, .timeline-inner { grid-template-columns: 1fr; gap: 35px; }
+  .timeline-inner .section-heading { max-width: 100%; }
+  .heading-note { max-width: 400px; }
+  footer { padding-right: 6%; padding-left: 6%; flex-wrap: wrap; }
+}
+@media (max-width: 520px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 14px; }
+  nav { width: 100%; justify-content: flex-start; gap: 7px 14px; }
+  nav a { font-size: 10px; }
+  .hero { min-height: 570px; align-items: flex-start; padding-top: 56px; }
+  .hero-copy { width: 100%; }
+  h1 { font-size: 77px; }
+  .hero-intro { max-width: 300px; font-size: 13px; }
+  .hero-art { top: auto; bottom: 0; width: 52%; height: 55%; }
+  .hero-bottom { font-size: 7px; }
+  .facts-strip { padding: 23px 7%; gap: 20px 10px; }
+  .facts-strip > div { padding-left: 12px; }
+  .facts-strip strong { font-size: 14px; }
+  .facts-strip div > span:last-child { font-size: 9px; }
+  .section { padding: 65px 7%; }
+  .initiative-grid { grid-template-columns: 1fr; }
+  .initiative-card { min-height: 145px; }
+  .timeline-item { grid-template-columns: 62px 1fr; gap: 12px; }
+  footer { align-items: flex-start; flex-direction: column; gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
